@@ -24,10 +24,14 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.css"
             ],
-            "scripts": []
-          },
+            "scripts": [
+              "node_modules/jquery/dist/jquery.slim.min.js",
+              "node_modules/popper.js/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]          },
           "configurations": {
             "production": {
               "fileReplacements": [
@@ -119,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "NerinSoap"
+    }
+  },
+  "defaultProject": "NerinSoap",
+  "cli": {
+    "analytics": "bb8afb0f-a1b7-4a56-980b-f134a9b550ee"
+  }
 }

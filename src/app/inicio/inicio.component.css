@@ -1,0 +1,21 @@
+.cont{
+    margin-top: 2%;
+    background-image: url('../../assets/images/Jabones-artesanales-2-1100x572.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    height: 600px;
+}
+
+#titulo{
+    color: white;
+    height: 600px;
+    background-color: #343a40b9;
+    text-align: center;
+    left: 0;
+
+}
+#titulo h1 {
+    font-size: 6em;
+    padding-top: 15%;
+}
