@@ -7,6 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
 
+  items = [
+    {
+      nombre : "jabon1.jpg"
+    },
+    {
+      nombre : "jabon2.jpg"
+    },
+    {
+      nombre : "jabon3.jpg"
+    },
+    {
+      nombre : "jabon4.jpg"
+    },
+    {
+      nombre : "jabon5.jpg"
+    },
+    {
+      nombre : "jabon6.jpg"
+    }
+
+  ]
+
   constructor() { }
 
   ngOnInit(): void {

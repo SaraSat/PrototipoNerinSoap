@@ -1,15 +1,15 @@
 .cont{
-    margin-top: 2%;
+    margin-top: 6%;
     background-image: url('../../assets/images/Jabones-artesanales-2-1100x572.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     display: block;
-    height: 600px;
+    height:650px;
 }
 
 #titulo{
     color: white;
-    height: 600px;
+    height: 650px;
     background-color: #343a40b9;
     text-align: center;
     left: 0;
@@ -18,4 +18,18 @@
 #titulo h1 {
     font-size: 6em;
     padding-top: 15%;
+}
+
+.card{
+    margin-bottom: 2%;
+    background-color: gray;
+    color: whitesmoke;
+}
+
+.card-title{
+    font-size: 1.75em;
+}
+
+.card-text{
+    font-size: 1.2em;
 }
