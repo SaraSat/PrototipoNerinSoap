@@ -24,6 +24,8 @@
     margin-bottom: 2%;
     background-color: gray;
     color: whitesmoke;
+    width: 300px;
+    height: 500px;
 }
 
 .card-title{

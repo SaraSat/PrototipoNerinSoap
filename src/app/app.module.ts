@@ -1,5 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {CommonModule} from '@angular/common';
+
+import {AccordionModule} from 'primeng/accordion';   
+import {CarouselModule} from 'primeng/carousel';
+import {ButtonModule} from 'primeng/button';
+import {ToastModule} from 'primeng/toast';
+import {TabViewModule} from 'primeng/tabview';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,11 +23,20 @@ import { ContactoComponent } from './contacto/contacto.component';
     FooterComponent,
     AboutComponent,
     InicioComponent,
-    ContactoComponent
+    ContactoComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    CommonModule,
+    AppRoutingModule,
+    CarouselModule,
+    AccordionModule,
+    ButtonModule,
+    ToastModule,
+    TabViewModule,
+    
+  
+
   ],
   providers: [],
   bootstrap: [AppComponent]

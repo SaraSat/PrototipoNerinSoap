@@ -7,24 +7,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
 
-  items = [
+  productos = [
     {
-      nombre : "jabon1.jpg"
+      image : "jabon1.jpg",
+      name: "Jabon 1",
+      price:10
     },
     {
-      nombre : "jabon2.jpg"
+      image : "jabon2.jpg",
+      name: "Jabon 2",
+      price:10
     },
     {
-      nombre : "jabon3.jpg"
+      image : "jabon3.jpg",
+      name: "Jabon 3",
+      price:10
     },
     {
-      nombre : "jabon4.jpg"
+      image : "jabon4.jpg",
+      name: "Jabon 4",
+      price:10
     },
     {
-      nombre : "jabon5.jpg"
+      image : "jabon5.jpg",
+      name: "Jabon 5",
+      price:10
     },
     {
-      nombre : "jabon6.jpg"
+      image : "jabon6.jpg",
+      name: "Jabon 6",
+      price:10
     }
 
   ]
