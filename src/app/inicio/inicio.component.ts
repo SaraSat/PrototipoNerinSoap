@@ -41,7 +41,11 @@ export class InicioComponent implements OnInit {
 
   ]
 
-  constructor() { }
+
+  constructor() { 
+    
+
+  }
 
   ngOnInit(): void {
   }

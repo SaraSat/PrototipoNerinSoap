@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {CommonModule} from '@angular/common';
+import { ResponsiveModule } from 'ngx-responsive'
 
 import {AccordionModule} from 'primeng/accordion';   
 import {CarouselModule} from 'primeng/carousel';
@@ -34,6 +35,7 @@ import { ContactoComponent } from './contacto/contacto.component';
     ButtonModule,
     ToastModule,
     TabViewModule,
+    ResponsiveModule.forRoot()
     
   
 

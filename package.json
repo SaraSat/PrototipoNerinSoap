@@ -21,6 +21,7 @@
     "@angular/router": "~10.1.0",
     "bootstrap": "^4.5.3",
     "jquery": "^3.5.1",
+    "ngx-responsive": "^8.2.0",
     "popper.js": "^1.16.1",
     "primeicons": "^4.0.0",
     "primeng": "^10.0.3",
