@@ -1,10 +1,12 @@
 
 .navbar{
     box-shadow: 2px 2px 20px;
+    
 }
 
 .navbar-brand{
     font-size: 2em;
+
 }
 
 .nav-item{
@@ -12,3 +14,5 @@
     width: 180px;
     text-align: center;
 }
+
+

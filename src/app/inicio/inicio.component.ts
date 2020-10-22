@@ -52,6 +52,12 @@ export class InicioComponent implements OnInit {
         numScroll: 3
     },
     {
+      breakpoint: '1000px',
+      numVisible: 2,
+      numScroll: 2
+  },
+
+    {
         breakpoint: '768px',
         numVisible: 2,
         numScroll: 2

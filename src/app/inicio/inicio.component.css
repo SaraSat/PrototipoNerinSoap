@@ -4,32 +4,33 @@
     background-repeat: no-repeat;
     background-size: cover;
     display: block;
-    height:650px;
+    height:100vh;
 }
 
 #titulo{
-    color: white;
-    height: 650px;
+
+    height: 100vh;
     background-color: #343a40b9;
     text-align: center;
     left: 0;
+    
+
 
 }
 #titulo h1 {
     font-size: 6em;
-    padding-top: 15%;
+    padding-top: 35vh;
+    color: blanchedalmond;
 }
 
 .product-item{
     margin-left: 2%;
-
 }
 
 .card{
-    background-color: gray;
+    background-color: #3f464d;
     color: whitesmoke;
     font-family: 'Marck Script', cursive;
-
 }
 
 .card-text{
@@ -38,11 +39,16 @@
 
 .card-text h4, h6{
     text-align: center;
+}
+
+.card-text h4{
     margin-top: 3%;
+   
 }
 
 .card-text p{
     margin-left: 5%;
 }
+
 
 
