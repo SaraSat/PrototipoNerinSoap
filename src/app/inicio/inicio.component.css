@@ -20,18 +20,15 @@
     padding-top: 15%;
 }
 
-.p-carousel {
-    display: none;
-  }
+.product-item{
+    margin-left: 2%;
 
+}
 
 .card{
     background-color: gray;
     color: whitesmoke;
-    height: 400px;
-    width: 300px;
     font-family: 'Marck Script', cursive;
-    margin-left: 2%;
 
 }
 
