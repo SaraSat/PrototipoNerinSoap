@@ -18,7 +18,7 @@
 
 #cont-2{
     color: whitesmoke;
-    margin-left:3%;
+    margin-left:4%;
     max-width: 90%;
     margin-top: 2%;
 
@@ -26,14 +26,12 @@
 
 #cont-3{
     color: whitesmoke;
-    margin-left: 3%;
+    margin-left: 4%;
     max-width: 90%;
-    margin-top: 2%;
 
 }
 
 #cont-4{
-    margin-top: 1%;
     margin-left: 3% ;
     margin-bottom: 20%;
 
@@ -45,26 +43,79 @@ img{
     width: 90%;
 }
 
-.row{
-    margin-bottom: 3%;
+@media (min-width:560px){
+    .titulo h1{
+        padding-top: 15vh;
+    }
+
+    #cont-1{
+        margin-top: 10%;
+    }
 }
 
-@media (max-width:1200px){
+@media (min-width:768px){
+
+    .titulo h1{
+        font-size: 5em;
+        padding-top: 8vh ;
+    }
+    
+
+    #cont-1{
+        margin-top: 20%;
+        margin-left: 4% ;
         
+    }
+    
+    #cont-2{
+        color: whitesmoke;
+        margin-top: 6%;
+        max-width: 90%;
+        margin-left: 0%;
+    
+    }
+    
     #cont-3{
-        margin-top: 5%;
-        margin-bottom: 5%;
+        color: whitesmoke;
+        margin-left: 3%;
+        max-width: 90%;
+        margin-bottom: 8%;
     
     }
     
     #cont-4{
-        margin-top: 15%;
+        margin-top: 25%;
     }
     
+    img{
+        border-radius: 2%;
+        box-shadow: 20px 20px 20px;
+        max-width: 400px;
+    }
 }
 
+@media (min-width: 812px){
 
-@media (max-width:992px){
+    .titulo h1{
+        padding-top:12vh ;
+    }
+
+    #cont-1{
+        margin-top: 22%;
+        margin-left: 5%;
+    }
+
+    
+    #cont-2{
+        margin-top: 8%;    
+    }
+
+    img{
+        max-width: 600px;
+    }
+}
+
+@media (min-width:992px){
 
     #cont-1{
         margin-top: 10%;
@@ -82,53 +133,25 @@ img{
     }
     
     img{
-        max-width: 500px;
+        max-width:600px;
     }
 
     
 }
 
-@media (max-width:768px){
-
-    .titulo h1{
-        color: blanchedalmond;
-        padding-left: 8%;
-        padding-top: 8vh;
-        font-size: 5em;
-    }
-    
-
-    #cont-1{
-        margin-top: 25%;
-        margin-left: 4% ;
+@media (min-width:1200px){
         
-    }
-    
-    #cont-2{
-        color: whitesmoke;
-        margin-top: 5%;
-        max-width: 90%;
-    
-    }
-    
     #cont-3{
-        color: whitesmoke;
-        margin-left: 3%;
-        max-width: 90%;
-        top:0;
-        margin-bottom: 8%;
+        margin-top: 5%;
+        margin-bottom: 5%;
     
     }
     
     #cont-4{
-        margin-top: 25%;
+        margin-top: 15%;
     }
-    
-    img{
-        border-radius: 2%;
-        box-shadow: 20px 20px 20px;
-        max-width: 400px;
-    }
-
     
 }
+
+
+
