@@ -1,13 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {CommonModule} from '@angular/common';
-import { ResponsiveModule } from 'ngx-responsive'
+import { ResponsiveModule } from 'ngx-responsive';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+
 
 import {AccordionModule} from 'primeng/accordion';   
 import {CarouselModule} from 'primeng/carousel';
 import {ButtonModule} from 'primeng/button';
 import {ToastModule} from 'primeng/toast';
 import {TabViewModule} from 'primeng/tabview';
+import {DataViewModule} from 'primeng/dataview';
+import {DropdownModule} from 'primeng/dropdown';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +21,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import { ProductosComponent } from './productos/productos.component';
 
 @NgModule({
   declarations: [
@@ -25,20 +31,22 @@ import { ContactoComponent } from './contacto/contacto.component';
     AboutComponent,
     InicioComponent,
     ContactoComponent,
+    ProductosComponent
   ],
   imports: [
     BrowserModule,
     CommonModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     CarouselModule,
     AccordionModule,
     ButtonModule,
     ToastModule,
     TabViewModule,
-    ResponsiveModule.forRoot()
-    
+    ResponsiveModule.forRoot(),
+    DataViewModule,
+    DropdownModule
   
-
   ],
   providers: [],
   bootstrap: [AppComponent]

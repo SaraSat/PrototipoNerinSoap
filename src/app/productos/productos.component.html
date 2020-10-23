@@ -1,0 +1,42 @@
+<div class="card bg-dark">
+    <div class="title">
+        <h1>Productos</h1>
+    </div>
+    <p-dataView #dv [value]="productos" [paginator]="true" [rows]="6" filterBy="name"
+                [sortField]="sortField" [sortOrder]="sortOrder" layout="grid" p-dataview-grid>        
+        <ng-template pTemplate="header">
+            <div class="p-d-flex p-flex-column p-flex-md-row p-jc-md-between">
+                <p-dropdown [options]="sortOptions" [(ngModel)]="sortKey" placeholder="Sort By Price" (onChange)="onSortChange($event)" styleClass="p-mb-2 p-mb-md-0"></p-dropdown>
+                
+                <input type="search" pInputText placeholder="Buscar por nombre" (input)="dv.filter($event.target.value)" class="bg-dark">
+
+                <span class="p-input-icon-right p-mb-2 p-mb-md-0 mb-2">
+                    <i class="pi pi-search bg-dark"></i>
+                </span>
+            </div>
+        </ng-template>
+
+        <ng-template let-product pTemplate="gridItem">
+            <div class="p-col-12 p-md-4">
+                <div class="product-grid-item card bg-dark">
+                    <div class="product-grid-item-top">
+                        <div class="cat">
+                            <i class="pi pi-tag product-category-icon"></i>
+                            <span class="product-category">{{product.category}}</span>
+                        </div>
+                    </div>
+                    <div class="product-grid-item-content">
+                        <img src="assets/images/{{product.image}}" [alt]="product.name"/>
+                        <div class="product-name">{{product.name}}</div>
+                        <hr class="my-4">
+                        <div class="product-description">{{product.description}}</div>
+                    </div>
+                    <div class="product-grid-item-bottom">
+                        <span class="product-price">{{product.price}}€</span>
+                        <p-button icon="pi pi-shopping-cart" class="carrito"></p-button>
+                    </div>
+                </div>
+            </div>
+        </ng-template>    
+    </p-dataView>
+</div>
