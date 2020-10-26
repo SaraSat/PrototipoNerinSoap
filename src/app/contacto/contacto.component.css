@@ -1,0 +1,85 @@
+#titulo{
+    margin-top: 5%;
+    height: 100px;
+}
+
+#titulo h1{
+    color: blanchedalmond;
+    padding-left: 8%;
+    padding-top: 10vh;
+    font-size: 4em;
+}
+
+.card{
+    margin-top: 20%;
+    color: whitesmoke;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 0px;
+
+}
+
+.card-title{
+    font-size: 2em;
+}
+
+.col-12{
+    margin-left: 2%;
+    margin-top: 10%;
+    font-size: 1.25em;
+}
+
+@media (min-width: 667px){
+    .card{
+        margin-bottom: 12%;
+        margin-top: 5%;
+        margin-right: 0%;
+    }
+
+    .col-12{
+        margin-top: 5%;
+    }
+}
+
+@media (min-width: 768px){
+    .card{
+        margin-top: 20%;
+        margin-bottom: 0%;
+      
+    }
+
+    .col-12{
+        font-size: 1.5em;
+    }
+
+}
+@media (min-width: 812px){
+    .card{
+        margin-top: 10%;
+        margin-bottom: 10%;
+      
+    }
+
+}
+
+
+
+
+@media(min-width:992px){
+    #titulo h1{
+        font-size: 6em;
+    }
+    .card{
+        margin-top: 10%;
+        margin-bottom: 0%;
+    }
+
+    .card-title{
+        font-size: 3em;
+    }
+
+    .col-12{
+        margin-left: 5%;
+    }
+
+}

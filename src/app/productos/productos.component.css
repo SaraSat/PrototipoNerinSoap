@@ -101,7 +101,6 @@ img{
 
     img{
         width: 90%;
-        height: 20%;
     }
 
 }
@@ -118,9 +117,6 @@ img{
         margin-top: 9%;
     }
 
-    img{
-        height: 30%;
-    }
 }
 
 @media (min-width: 1200px){
@@ -129,9 +125,6 @@ img{
         margin-top: 8%;
     }
 
-    img{
-        height: 40%;
-    }
 }
 
 @media(min-width: 1400px){
