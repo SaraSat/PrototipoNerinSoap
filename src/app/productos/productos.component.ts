@@ -24,11 +24,12 @@ export class ProductosComponent implements OnInit {
 
   constructor(private primengConfig: PrimeNGConfig) { }
 
+
   ngOnInit(): void {
 
     this.sortOptions = [
-      {label: 'Price High to Low', value: '!price'},
-      {label: 'Price Low to High', value: 'price'}
+      {label: 'Precio más alto', value: '!price'},
+      {label: 'Precio más bajo', value: 'price'}
     ];
 
     this.primengConfig.ripple = true;

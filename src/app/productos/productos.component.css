@@ -2,8 +2,8 @@
 .card {
     color: whitesmoke;
     font-family: 'Marck Script', cursive;
-    font-size: 1.5em;
-    margin-top: 10%;
+    margin-top: 25%;
+    margin-bottom: 15%;
     
 
 }
@@ -11,15 +11,19 @@
 .title h1{
     color:blanchedalmond;
     font-size: 3em;
+    margin-left: 5%;
     
 }
 
-.pi{
-    margin-right: 2%;
+.product-grid-item{
+    margin-bottom: 0%;
+    margin-top: 10%;
+    padding: 10%
 }
 
-.cat{
-    margin-bottom: 2%;
+.product-category{
+    margin-left: 2%;
+    font-size: 1.5em;
 }
 
 .product-name{
@@ -30,6 +34,7 @@
 
 .product-description{
     text-align: center;
+    font-size: 1em;
 
 }
 
@@ -44,8 +49,97 @@
 }
 
 img{
-    margin-left: 5%;
+    margin-top: 3%;
     border-radius: 2%;
+    width:250px;
     box-shadow: 2px 2px 20px rgb(39, 37, 37);
 }
+
+@media (min-width:360px){
+    .card{
+        margin-top: 20%;
+    }
+
+    .product-grid-item{
+        margin-top: 8%;
+    }
+
+    img{
+        margin-left: 5%;
+    }
+
+}
+
+@media (min-width:400px){
+    img{
+        width: 100%;
+        margin-left: 2%;
+    }
+}
+
+@media(min-width: 740px){
+
+    .card{
+        margin-top: 10%;
+    }
+
+    img{
+        height: 200px;
+    }
+}
+
+@media (min-width: 768px){
+
+    .product-category{
+        font-size: 1em;
+    }
+    
+    .product-description{
+        text-align: left;
+    
+    }
+
+    img{
+        width: 90%;
+        height: 20%;
+    }
+
+}
+
+@media (min-width: 812px){
+    .card{
+        margin-top: 9%;
+    }
+}
+
+@media (min-width: 992px){
+
+    .card{
+        margin-top: 9%;
+    }
+
+    img{
+        height: 30%;
+    }
+}
+
+@media (min-width: 1200px){
+
+    .card{
+        margin-top: 8%;
+    }
+
+    img{
+        height: 40%;
+    }
+}
+
+@media(min-width: 1400px){
+    .card{
+        margin-top: 6.5%;
+    }
+}
+
+
+
 
