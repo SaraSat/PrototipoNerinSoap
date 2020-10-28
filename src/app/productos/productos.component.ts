@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {SelectItem} from 'primeng/api';
 import { PrimeNGConfig } from 'primeng/api';
-import {Productos} from './Productos'
+import { Producto } from './producto';
+import { ProductoService } from './producto.service';
 
 
 @Component({
@@ -17,25 +18,27 @@ export class ProductosComponent implements OnInit {
 
   sortField: string;
 
-  products;
-
-  productos:[];
+  productos: Producto[];
 
 
-  constructor(private primengConfig: PrimeNGConfig) { }
+  constructor(private primengConfig: PrimeNGConfig, private productoService: ProductoService) { }
 
 
   ngOnInit(): void {
+
+    this.productoService.getProductos().subscribe(
+      response => {
+        this.productos = response as Producto[];
+      }
+    )
+
 
     this.sortOptions = [
       {label: 'Precio más alto', value: '!price'},
       {label: 'Precio más bajo', value: 'price'}
     ];
 
-    this.primengConfig.ripple = true;
-    
-    this.products = new Productos;
-    this.productos = this.products.productos
+    this.primengConfig.ripple = true;      
   }
 
   onSortChange(event) {

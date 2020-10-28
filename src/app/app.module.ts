@@ -23,6 +23,10 @@ import { InicioComponent } from './inicio/inicio.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { ProductosComponent } from './productos/productos.component';
 
+import {ProductoService} from './productos/producto.service';
+import { HttpClientModule } from '@angular/common/http';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +41,7 @@ import { ProductosComponent } from './productos/productos.component';
     BrowserModule,
     CommonModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     CarouselModule,
     AccordionModule,
@@ -48,7 +53,7 @@ import { ProductosComponent } from './productos/productos.component';
     DropdownModule
   
   ],
-  providers: [],
+  providers: [ProductoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
