@@ -1,0 +1,52 @@
+<div class="container">
+    <p-toolbar>
+        <ng-template pTemplate="left">
+            <button pButton pRipple label="New" icon="pi pi-plus" class="p-button-success p-mr-2" (click)="openNew()"></button>
+            <button pButton pRipple [label]="Delete" icon="pi pi-trash" class="p-button-danger" (click)="deleteSelectedProducts()" [disabled]="!selectedProducts || !selectedProducts.length"></button>
+        </ng-template>
+
+    </p-toolbar>
+
+    <p-table #dt [value]="productos" styleClass="p-datatable-gridlines" [rows]='10' [paginator]='true'  [(selection)]="selectedProducts" [rowHover]="true" dataKey="id"
+    [globalFilterFields]="['name', 'price', 'category']" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [showCurrentPageReport]="true" >
+        
+        <ng-template pTemplate="caption">
+            <div class="p-d-flex p-ai-center p-jc-between">
+                <h5 class="p-m-0">Manage Products</h5>
+                <span class="p-input-icon-right">
+                    <i class="pi pi-search bg-dark"></i>
+                    <input pInputText type="text" (input)="dt.filterGlobal($event.target.value, 'contains')" placeholder="Search..."  class="  bg-dark"/>
+                </span>
+            </div>
+        </ng-template>
+
+        <ng-template pTemplate="header">
+            <tr>
+                <th style="width: 3rem">
+                    <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+                </th>
+                <th *ngFor="let col of cols" pSortableColumn="{{col.field}}">
+                    {{col.header}} 
+                    <p-sortIcon field="{{col.field}}"></p-sortIcon>
+                </th>
+                <th colspan="3">Descripción</th>
+                <th colspan="3">Imagen</th>
+            </tr>
+        </ng-template>
+
+        <ng-template pTemplate="body" let-producto>
+            <tr>
+                <td>
+                    <p-tableCheckbox [value]="producto"></p-tableCheckbox>
+                </td>
+                <td *ngFor="let col of cols">
+                        {{producto[col.field]}}
+                </td>
+                <td colspan="3">{{producto.description}}</td>
+                <td colspan="3"><img src="../../assets/images/{{producto.img}}"  width="200" class="p-shadow-4"></td>
+            </tr>    
+        </ng-template>
+
+    </p-table>
+
+</div>

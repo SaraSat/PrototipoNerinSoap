@@ -12,7 +12,8 @@ import {ToastModule} from 'primeng/toast';
 import {TabViewModule} from 'primeng/tabview';
 import {DataViewModule} from 'primeng/dataview';
 import {DropdownModule} from 'primeng/dropdown';
-
+import {TableModule} from 'primeng/table';
+import {ToolbarModule} from 'primeng/toolbar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,8 +24,10 @@ import { InicioComponent } from './inicio/inicio.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { ProductosComponent } from './productos/productos.component';
 
+
 import {ProductoService} from './productos/producto.service';
 import { HttpClientModule } from '@angular/common/http';
+import { GestorComponent } from './gestor/gestor.component';
 
 
 @NgModule({
@@ -35,7 +38,8 @@ import { HttpClientModule } from '@angular/common/http';
     AboutComponent,
     InicioComponent,
     ContactoComponent,
-    ProductosComponent
+    ProductosComponent,
+    GestorComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +54,9 @@ import { HttpClientModule } from '@angular/common/http';
     TabViewModule,
     ResponsiveModule.forRoot(),
     DataViewModule,
-    DropdownModule
+    DropdownModule,
+    TableModule,
+    ToolbarModule
   
   ],
   providers: [ProductoService],
