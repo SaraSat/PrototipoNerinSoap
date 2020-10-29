@@ -6,6 +6,6 @@ export class Producto {
     description:string;
     price:number;
     category:string;
-
-
+    destacable:boolean;
+    fav:string;
 }

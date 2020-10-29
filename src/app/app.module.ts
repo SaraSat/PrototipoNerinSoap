@@ -14,6 +14,13 @@ import {DataViewModule} from 'primeng/dataview';
 import {DropdownModule} from 'primeng/dropdown';
 import {TableModule} from 'primeng/table';
 import {ToolbarModule} from 'primeng/toolbar';
+import {DialogModule} from 'primeng/dialog';
+import {RadioButtonModule} from 'primeng/radiobutton';
+import {InputTextModule} from 'primeng/inputtext';
+import {InputTextareaModule} from 'primeng/inputtextarea';
+import {RippleModule} from 'primeng/ripple';
+import {ConfirmDialogModule} from 'primeng/confirmdialog';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +30,7 @@ import { AboutComponent } from './about/about.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { ProductosComponent } from './productos/productos.component';
+
 
 
 import {ProductoService} from './productos/producto.service';
@@ -56,7 +64,13 @@ import { GestorComponent } from './gestor/gestor.component';
     DataViewModule,
     DropdownModule,
     TableModule,
-    ToolbarModule
+    ToolbarModule,
+    DialogModule,
+    RadioButtonModule,
+    InputTextModule,
+    InputTextareaModule,
+    RippleModule,
+    ConfirmDialogModule,
   
   ],
   providers: [ProductoService],
