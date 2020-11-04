@@ -56,40 +56,52 @@
 
 <p-dialog [(visible)]="productDialog" [style]="{width: '450px'}" header="Nuevo Producto" [modal]="true" styleClass="p-fluid">
     <ng-template pTemplate="content">
-        <img src="../../assets/images/{{producto.img}}" [alt]="producto.img" class="producto-img" *ngIf="producto.img">
+       <!--<img src="../../assets/images/{{producto.img}}" [alt]="producto.img" class="producto-img" *ngIf="producto.img">--> 
         <div class="p-field">
             <label for="name">Nombre</label>
-            <input type="text" pInputText id="name" [(ngModel)]="producto.name" required autofocus />
-            <small class="p-invalid" *ngIf="submitted && !product.name">El nombre es obligatorio.</small>
+            <input type="text" pInputText name="name" [(ngModel)]="producto.name" required autofocus />
+            <small class="p-invalid" *ngIf="submitted && !producto.name">El nombre es obligatorio.</small>
         </div>
         <div class="p-field">
+            <label for="img">Imagen</label>
+            <input type="text" pInputText name="img" [(ngModel)]="producto.img" required/>
+            <small class="p-invalid" *ngIf="submitted && !producto.img">El nombre de la imagen es obligatorio.</small>
+        </div>
+        <div class="p-field">
+            <label for="price">Precio</label>
+            <input type="text" pInputText name="price" [(ngModel)]="producto.price" required />
+            <small class="p-invalid" *ngIf="submitted && !producto.price">El nombre precio es obligatorio.</small>
+        </div>
+
+
+        <div class="p-field">
             <label for="description">Descripción</label>
-            <textarea id="description" pInputTextarea [(ngModel)]="producto.description" required rows="3" cols="20"></textarea>
+            <textarea name="description" pInputTextarea [(ngModel)]="producto.description" required rows="3" cols="20"></textarea>
         </div>
 
         <div class="p-field">
             <label class="p-mb-3">Categoría</label>
             <div class="p-formgrid p-grid">
                 <div class="p-field-radiobutton p-col-6">
-                    <p-radioButton id="category1" name="category" value="Accessories" [(ngModel)]="producto.category"></p-radioButton>
+                    <p-radioButton id="category1" name="category" value="Gel" [(ngModel)]="producto.category"></p-radioButton>
                     <label for="category1">Gel</label>
                 </div>
                 <div class="p-field-radiobutton p-col-6">
-                    <p-radioButton id="category2" name="category" value="Clothing" [(ngModel)]="producto.category"></p-radioButton>
+                    <p-radioButton id="category2" name="category" value="Champú" [(ngModel)]="producto.category"></p-radioButton>
                     <label for="category2">Champú</label>
                 </div>
             </div>
         </div>
 
         <div class="p-field">
-            <label class="p-mb-3">Destacable</label>
+            <label class="p-mb-3">Favorito</label>
             <div class="p-formgrid p-grid">
                 <div class="p-field-radiobutton p-col-6">
-                    <p-radioButton id="destacable1" name="destacable" value="Accessories" [(ngModel)]="producto.destacable"></p-radioButton>
+                    <p-radioButton id="destacable1" name="fav" value=true [(ngModel)]="producto.fav"></p-radioButton>
                     <label for="destacable1">Sí</label>
                 </div>
                 <div class="p-field-radiobutton p-col-6">
-                    <p-radioButton id="destacable2" name="destacable" value="Clothing" [(ngModel)]="producto.destacable"></p-radioButton>
+                    <p-radioButton id="destacable2" name="fav" value=false [(ngModel)]="producto.fav"></p-radioButton>
                     <label for="destacable2">No</label>
                 </div>
             </div>
@@ -99,8 +111,8 @@
     
     <ng-template pTemplate="footer">
         <button pButton pRipple label="Cancel" icon="pi pi-times" class="p-button-text" (click)="hideDialog()"></button>
-        <button pButton pRipple label="Save" icon="pi pi-check" class="p-button-text" (click)="saveProduct()"></button>
+        <button pButton pRipple label="Save" icon="pi pi-check" class="p-button-text" (click)="saveProduct(producto)"></button>
     </ng-template>
 </p-dialog>
 
-<!--<p-confirmDialog [style]="{width: '450px'}"></p-confirmDialog>-->
+<p-confirmDialog [style]="{width: '450px'}"></p-confirmDialog>

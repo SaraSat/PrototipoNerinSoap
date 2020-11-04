@@ -20,6 +20,7 @@ import {InputTextModule} from 'primeng/inputtext';
 import {InputTextareaModule} from 'primeng/inputtextarea';
 import {RippleModule} from 'primeng/ripple';
 import {ConfirmDialogModule} from 'primeng/confirmdialog';
+import { FormsModule } from '@angular/forms'; 
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -71,6 +72,7 @@ import { GestorComponent } from './gestor/gestor.component';
     InputTextareaModule,
     RippleModule,
     ConfirmDialogModule,
+    FormsModule
   
   ],
   providers: [ProductoService],

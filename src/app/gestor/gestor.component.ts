@@ -4,6 +4,7 @@ import {ProductoService} from '../productos/producto.service';
 
 import { ConfirmationService } from 'primeng/api';
 import { MessageService } from 'primeng/api';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-gestor',
@@ -14,7 +15,7 @@ import { MessageService } from 'primeng/api';
 export class GestorComponent implements OnInit {
 
   productos:Producto[];
-  producto: Producto = new Producto();
+  producto: Producto;
 
   cols: any[];
   selectedProducts: Producto[];
@@ -22,7 +23,7 @@ export class GestorComponent implements OnInit {
   productDialog:boolean = false;
   submitted:boolean;
 
-  constructor(private productoService: ProductoService) { }
+  constructor(private productoService: ProductoService, private router:Router) { }
 
   ngOnInit(): void {
 
@@ -49,11 +50,38 @@ export class GestorComponent implements OnInit {
   }
 
   openNew() {
-    this.producto = Object.assign({});
+    this.producto  = {};
+
     this.submitted = false;
     this.productDialog = true;
 
   }
+  saveProduct() {
+    this.submitted = true
+    if(this.producto.fav = "true"){
+      this.producto.destacable = true
+
+    }else{
+      this.producto.destacable = false
+    }
+    
+    this.productoService.createProducto(this.producto).subscribe(request =>{
+      this.router.navigate(['/gestor'])
+      console.log(request)
+    })
+
+    this.productDialog = false
+  }
+
+  hideDialog() {
+    this.productDialog = false;
+    this.submitted = false;
+}
+
+  findIndexById(id: number){
+    this.productoService.getProducto(id).subscribe(producto => this.producto = producto)
+  }
+
 
 
 
