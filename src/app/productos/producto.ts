@@ -2,7 +2,7 @@
 export class Producto {
     id?:number;
     name?:String;
-    img?:string;
+    img?:File;
     description?:string;
     price?:number;
     category?:string;

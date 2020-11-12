@@ -56,7 +56,7 @@
 
 <p-dialog [(visible)]="productDialog" [style]="{width: '450px'}" header="Nuevo Producto" [modal]="true" styleClass="p-fluid">
     <ng-template pTemplate="content">
-       <!--<img src="../../assets/images/{{producto.img}}" [alt]="producto.img" class="producto-img" *ngIf="producto.img">--> 
+       <img src="../../assets/images/{{producto.img}}" [alt]="producto.img" class="producto-img" *ngIf="producto.img"> 
         <div class="p-field">
             <label for="name">Nombre</label>
             <input type="text" pInputText name="name" [(ngModel)]="producto.name" required autofocus />
@@ -64,7 +64,8 @@
         </div>
         <div class="p-field">
             <label for="img">Imagen</label>
-            <input type="text" pInputText name="img" [(ngModel)]="producto.img" required/>
+            <input type="file" pInputText name="img" required (change)="seleccionarFoto($event)" />
+            <button (click)="subirFoto()" [disabled]="!fotoSeleccionada" class="btn btn-success" type="button">Aceptar</button>
             <small class="p-invalid" *ngIf="submitted && !producto.img">El nombre de la imagen es obligatorio.</small>
         </div>
         <div class="p-field">

@@ -10,7 +10,7 @@ import {Producto} from './producto';
 })
 export class ProductoService {
 
-  private url:string = 'http://localhost:8000/api/productos/'
+  private url:string = 'http://localhost:8000/api/productos'
 
   constructor(private http: HttpClient) { }
 
@@ -23,12 +23,12 @@ export class ProductoService {
   }
 
   createProducto(producto: Producto): Observable<Producto> {
-    console.log(producto)
     return this.http.post<Producto>(this.url, producto)
 
   }
 
   updateProducto(producto: Producto): Observable<Producto>{
+    console.log(producto)
     return this.http.put<Producto>(`${this.url}/${producto.id}`, producto)
   }
 

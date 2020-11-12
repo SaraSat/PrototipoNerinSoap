@@ -5,6 +5,7 @@ import {ProductoService} from '../productos/producto.service';
 import { ConfirmationService } from 'primeng/api';
 import { MessageService } from 'primeng/api';
 import { Router } from '@angular/router';
+import { TransitiveCompileNgModuleMetadata } from '@angular/compiler';
 
 @Component({
   selector: 'app-gestor',
@@ -22,6 +23,10 @@ export class GestorComponent implements OnInit {
 
   productDialog:boolean = false;
   submitted:boolean;
+
+  edit:boolean;
+
+  fotoSeleccionada:File;
 
   constructor(private productoService: ProductoService, private router:Router) { }
 
@@ -54,21 +59,62 @@ export class GestorComponent implements OnInit {
 
     this.submitted = false;
     this.productDialog = true;
+    this.edit = false;
 
   }
+
+  editProduct(producto: Producto){
+    this.producto = producto;
+    this.edit = true;
+    this.productDialog = true;
+  
+  }
+
+  seleccionarFoto(event){
+    this.fotoSeleccionada = event.target.files[0];
+    
+  }
+
+  subirFoto(){
+    let formData = new FormData()
+    formData.append("img.name", this.fotoSeleccionada)
+  }
+  
   saveProduct() {
     this.submitted = true
-    if(this.producto.fav = "true"){
-      this.producto.destacable = true
 
-    }else{
-      this.producto.destacable = false
+    this.producto.img = this.fotoSeleccionada;
+
+    console.log(this.producto.img)
+
+    if(this.edit){
+
+      if(this.producto.fav == "true"){
+        this.producto.fav = "Si"
+      }else{
+        this.producto.fav = "No"
+      }
+
+      console.log(this.producto.name)
+      this.productoService.updateProducto(this.producto).subscribe(producto => this.producto = producto);
+
     }
+
+    else{
+
+      if(this.producto.fav = "true"){
+        this.producto.destacable = true
     
-    this.productoService.createProducto(this.producto).subscribe(request =>{
+      }else{
+        this.producto.destacable = false
+      }  
+  
+      this.productoService.createProducto(this.producto).subscribe(request =>{
       this.router.navigate(['/gestor'])
       console.log(request)
     })
+
+    }
 
     this.productDialog = false
   }
@@ -81,8 +127,6 @@ export class GestorComponent implements OnInit {
   findIndexById(id: number){
     this.productoService.getProducto(id).subscribe(producto => this.producto = producto)
   }
-
-
 
 
 }
