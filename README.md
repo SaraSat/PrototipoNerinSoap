@@ -67,3 +67,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 # Laravel: 
 [Api_Laravel](https://github.com/SaraSat/api_NerinSoap/blob/main/app/Http/Controllers/ProductoController.php)
+
+<br> 
+
+Esta obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+          licencia de Creative Commons Reconocimiento-NoComercial 4.0 Internacional</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+  <img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png"/>
+</a> 
