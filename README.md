@@ -33,9 +33,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ![ImagenInicio](https://github.com/SaraSat/PrototipoNerinSoap/blob/main/src/assets/images/inicio.PNG)
 
-[Código_Inicio](https://github.com/SaraSat/PrototipoNerinSoap/tree/main/src/app/inicio)
+[Código_Inicio](https://github.com/SaraSat/PrototipoNerinSoap/tree/main/src/app/inicio) <br>
 
-[Código_Header](https://github.com/SaraSat/PrototipoNerinSoap/tree/main/src/app/header)
+[Código_Header](https://github.com/SaraSat/PrototipoNerinSoap/tree/main/src/app/header) <br>
 
 [Código_Footer](https://github.com/SaraSat/PrototipoNerinSoap/tree/main/src/app/footer)
 
