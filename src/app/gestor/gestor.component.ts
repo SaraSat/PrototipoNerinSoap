@@ -77,7 +77,7 @@ export class GestorComponent implements OnInit {
 
   subirFoto(){
     let formData = new FormData()
-    formData.append("img.name", this.fotoSeleccionada)
+    formData.append("img", this.fotoSeleccionada)
   }
   
   saveProduct() {

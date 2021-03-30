@@ -64,7 +64,7 @@
         </div>
         <div class="p-field">
             <label for="img">Imagen</label>
-            <input type="file" pInputText name="img" required (change)="seleccionarFoto($event)" />
+            <input type="file" pInputText name="img" required (change)="seleccionarFoto($event)"/>
             <button (click)="subirFoto()" [disabled]="!fotoSeleccionada" class="btn btn-success" type="button">Aceptar</button>
             <small class="p-invalid" *ngIf="submitted && !producto.img">El nombre de la imagen es obligatorio.</small>
         </div>
