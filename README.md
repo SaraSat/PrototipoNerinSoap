@@ -65,3 +65,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 [Código_Gestión_Productos](https://github.com/SaraSat/PrototipoNerinSoap/tree/main/src/app/gestor)
 
+# Laravel: 
+[Api_Laravel](https://github.com/SaraSat/api_NerinSoap/blob/main/app/Http/Controllers/ProductoController.php)
