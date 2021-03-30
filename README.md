@@ -26,3 +26,42 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 # PrototipoNerinSoap
+
+## Aplicación gestión de productos
+
+# Inicio: 
+
+![ImagenInicio](https://github.com/SaraSat/PrototipoNerinSoap/blob/main/src/assets/images/inicio.PNG)
+
+[Código_Inicio](https://github.com/SaraSat/PrototipoNerinSoap/tree/main/src/app/inicio)
+
+[Código_Header](https://github.com/SaraSat/PrototipoNerinSoap/tree/main/src/app/header)
+
+[Código_Footer](https://github.com/SaraSat/PrototipoNerinSoap/tree/main/src/app/footer)
+
+# Productos
+![ImagenInicio](https://github.com/SaraSat/PrototipoNerinSoap/blob/main/src/assets/images/productos.PNG)
+
+[Código_Productos](https://github.com/SaraSat/PrototipoNerinSoap/tree/main/src/app/productos)
+
+# About
+![ImagenInicio](https://github.com/SaraSat/PrototipoNerinSoap/blob/main/src/assets/images/about.PNG)
+
+[Código_About](https://github.com/SaraSat/PrototipoNerinSoap/tree/main/src/app/about)
+
+# Contacto
+![ImagenInicio](https://github.com/SaraSat/PrototipoNerinSoap/blob/main/src/assets/images/contacto.PNG)
+
+[Código_Contacto](https://github.com/SaraSat/PrototipoNerinSoap/tree/main/src/app/contacto)
+
+
+# Gestión de productos: 
+
+![Imagen_Productos_Tabla](https://github.com/SaraSat/PrototipoNerinSoap/blob/main/src/assets/images/tabla.PNG)
+
+![Imagen_Productos_Registro](https://github.com/SaraSat/PrototipoNerinSoap/blob/main/src/assets/images/nuevo.PNG)
+
+![Imagen_Productos_Editar](https://github.com/SaraSat/PrototipoNerinSoap/blob/main/src/assets/images/editar.PNG)
+
+[Código_Gestión_Productos](https://github.com/SaraSat/PrototipoNerinSoap/tree/main/src/app/gestor)
+
